@@ -1,0 +1,103 @@
+.modal {
+    background-color: rgba(13, 20, 57, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 70;
+
+    display: flex;
+    justify-content: center;
+}
+
+.modal .small {
+    font-size: 14px;
+}
+
+.modal .container {
+    padding: 20px;
+    background-color: white;
+    border-bottom: 10px solid var(--blue);
+    max-width: 400px;
+}
+
+.modal .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.modal .title h2 {
+    color: var(--blue);
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+    border: 1px solid var(--blue);
+    padding: 5px;
+    margin-top: 5px;
+    width: calc(100% - 10px);
+    resize: none;
+}
+
+.modal textarea {
+    height: 50px;
+}
+
+.modal input[type="checkbox"] {
+    width: auto;
+}
+
+.modal input:focus {
+    box-shadow: 0 0 5px 0 var(--blue);
+}
+
+.modal button.mainBtn {
+    width: 100%;
+    height: 40px;
+    background-color: var(--blue);
+    color: white;
+    border: 2px solid var(--blue);
+    font-size: 18px;
+}
+
+.modal button.mainBtn:hover {
+    background-color: #34439e;
+    border: 2px solid #34439e;
+    transition: 0.3s;
+}
+
+.modal button.secondBtn {
+    color: #424242;
+    text-decoration: underline;
+    display: block;
+    margin: 10px auto;
+}
+.modal button.secondBtn:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.modal button.mainBtn:disabled {
+    opacity: 0.5;
+}
+
+.modal .close img {
+    width: 20px;
+
+    height: 20px;
+}
+
+.modal .error {
+    color: tomato;
+    font-size: 14px;
+}

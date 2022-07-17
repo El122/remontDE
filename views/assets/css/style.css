@@ -1,0 +1,358 @@
+:root {
+    --blue: #4b58a5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    outline: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+    padding: 20px 10px;
+}
+
+header {
+    background-color: var(--blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 52;
+    box-shadow: 0px 5px 40px -5px grey;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header .logo {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+header a,
+header button {
+    margin: 0 10px;
+    color: white;
+}
+
+#home {
+    min-height: 100vh;
+    max-height: 900px;
+    background-image: url("../img/jpg/homeBack.jpg");
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+}
+
+#home .text {
+    width: fit-content;
+    background: linear-gradient(20deg, transparent, #ffffff9e, transparent);
+    padding: 40px;
+}
+
+#home h1 {
+    font-size: 72px;
+    line-height: 70px;
+    margin-bottom: 40px;
+}
+
+#home ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#home li {
+    font-size: 22px;
+}
+
+#home button {
+    width: 200px;
+    height: 50px;
+    background-color: var(--blue);
+    color: white;
+    border: 2px solid var(--blue);
+    font-size: 22px;
+}
+
+#home button:hover {
+    transition: 0.2s;
+    box-shadow: 0 5px 40px -10px var(--blue);
+}
+
+#finishedOrders .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+#finishedOrders .counter {
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#finishedOrders .ordersContainer {
+    display: flex;
+    gap: 20px;
+}
+
+#finishedOrders .card {
+    width: calc(25% - 15px);
+    border-bottom: 10px solid var(--blue);
+}
+
+#finishedOrders .text {
+    padding: 20px;
+}
+
+#finishedOrders .imgBox {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#finishedOrders img {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+#finishedOrders h3 {
+    font-size: 20px;
+}
+
+#finishedOrders .date {
+    font-size: 12px;
+    color: gray;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: var(--blue);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a,
+footer span {
+    color: lavender;
+}
+
+.profileInfo {
+    background-image: url("../img/jpg/profileBack.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.profileInfo .container {
+    padding: 150px 0;
+}
+
+.profileInfo .info {
+    text-align: center;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+#orders .title,
+#cats .title,
+#orders .filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+#orders #filter {
+    width: 80%;
+    padding: 5px 10px;
+    border: 1px solid var(--blue);
+}
+
+#orders button,
+#cats button {
+    width: 200px;
+    height: 40px;
+    background-color: var(--blue);
+    color: white;
+    border: 2px solid var(--blue);
+    font-size: 18px;
+}
+
+#orders button:hover {
+    background-color: #34439e;
+    border: 2px solid #34439e;
+    transition: 0.3s;
+}
+
+#orders .card {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+
+    border-bottom: 10px solid var(--blue);
+}
+
+#orders .card .info {
+    padding: 20px;
+    width: 100%;
+}
+
+#orders .card .info div {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blue);
+}
+
+#orders .card .imgBox {
+    width: 400px;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#orders .card .imgBox img {
+    position: relative;
+    width: 100%;
+    min-height: 230px;
+    object-fit: cover;
+}
+
+#orders .card .stat {
+    position: absolute;
+    padding: 5px 10px;
+    top: 20px;
+    left: -20px;
+    z-index: 5;
+    color: white;
+}
+
+#orders .card .delBtn {
+    position: absolute;
+    padding: 5px 10px;
+    top: 60px;
+    left: -20px;
+    z-index: 5;
+    color: white;
+    background-color: tomato;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    border: none;
+}
+
+#orders .card .editBtn:hover {
+    background-color: #d8563e;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#orders .card .editBtn {
+    position: absolute;
+    padding: 5px 10px;
+    top: 60px;
+    left: -20px;
+    z-index: 5;
+    color: white;
+    background-color: #428dcd;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    border: none;
+}
+
+#orders .card .delBtn:hover {
+    background-color: #d8563e;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#orders .card .editBtn:hover {
+    background-color: #2578bf;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#orders .card .stat.newOrder {
+    background-color: #2255b3;
+}
+
+#orders .card .stat.nowOrder {
+    background-color: #e08f2b;
+}
+
+#orders .card .stat.finishedOrder {
+    background-color: #008a5d;
+}
+
+.empty {
+    color: gray;
+    text-align: center;
+    margin: 30px auto;
+}
+
+#cats .card {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--blue);
+}
+
+#cats .card i {
+    font-size: 12px;
+}
+
+#cats .card button {
+    width: 35px;
+    height: 35px;
+}
+
+#cats .card button img {
+    width: 15px;
+    height: 15px;
+    filter: invert(1);
+}
